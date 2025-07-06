@@ -1,14 +1,14 @@
-安装docker：
-安装dify：
-安装ollama：
-装载模型：
+安装docker：https://github.com/meah-rad/ai-create/blob/main/%E5%AE%89%E8%A3%85docker
+安装dify：https://github.com/meah-rad/ai-create/blob/main/%E5%AE%89%E8%A3%85dify
+安装ollama：https://github.com/meah-rad/ai-create/blob/main/%E5%AE%89%E8%A3%85ollama
+装载模型：https://github.com/meah-rad/ai-create/blob/main/%E8%A3%85%E8%BD%BD%E6%A8%A1%E5%9E%8B
   模型挑选：
   模型训练：
-运行dify：
+运行dify：https://github.com/meah-rad/ai-create/blob/main/%E8%BF%90%E8%A1%8Cdify
   加载ollama；
   配置embed模型
   配置问答模型
   配置工作流
-创建知识库：
-修改映射路径：
+创建知识库：https://github.com/meah-rad/ai-create/blob/main/%E5%88%9B%E5%BB%BA%E7%9F%A5%E8%AF%86%E5%BA%93
+修改映射路径：https://github.com/meah-rad/ai-create/blob/main/docker%E5%AE%89%E8%A3%85nginx
 
