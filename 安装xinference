@@ -1,0 +1,19 @@
+docker run \
+  -v </xinfer/home/xin>/.xinference:/root/.xinference \
+  -v </xinfer/home/xin>/.cache/huggingface:/root/.cache/huggingface \
+  -v </xinfer/home/xin>/.cache/modelscope:/root/.cache/modelscope \
+  -p 9997:9997 \
+  --gpus all \
+  xprobe/xinference:v<7.1> \
+  xinference-local -H 0.0.0.0
+
+docker run -e XINFERENCE_MODEL_SRC=modelscope -p 9998:9997 --gpus all xprobe/xinference:v<your_version> xinference-local -H 0.0.0.0 --log-level debug
+
+docker run `
+  -v "C:\Users\lanji\.xinference":/root/.xinference `
+  -v "C:\Users\lanji\.cache\huggingface":/root/.cache/huggingface `
+  -v "C:\Users\lanji\.cache\modelscope":/root/.cache/modelscope `
+  -p 9997:9997 `
+  --gpus all `
+  xprobe/xinference:v<your_version> `
+  xinference-local -H 0.0.0.0
