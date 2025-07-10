@@ -1,1 +1,9 @@
+docker 在官网下载，docker desktop版本
+https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module
+下载过程中，打开控制面板——应用程序功能——启用和关闭功能中，打开 hyper-v；打开window基于linux的虚拟化；
+下载后安装；
+安装完后；
+在CMD中输入 wsl -update；
+docker可以正常使用了
+在设置——扩展功能中——打开 enable-GPU- 的打开gpu加速推理功能。
 
