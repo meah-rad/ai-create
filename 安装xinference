@@ -17,3 +17,31 @@ docker run `
   --gpus all `
   xprobe/xinference:v<your_version> `
   xinference-local -H 0.0.0.0
+
+
+官方的文档中给出的方式，是有用的，但是走了一些弯路；
+1、docker中，直接拉取官方的镜像，会有cuda版本不一致的问题；导致运行不起来；所以我是自己创建了环境进行部署；
+在自己电脑上，CMD中运行：nvcc --version；查看cuda安装的情况 
+运行：nvidia -smi 查看 gpu的使用情况。如果运行不成功，在C:/window/system32/ 路径下 运行；成功后继续往下。没成功需要重新下载 cuda驱动，在nivdia官网下载就好。
+2、在docker hub中 找到 python3.10的进行安装；
+docker run -it python:3.10 /bin/bash
+3、进入到了容器中，开始进行环境搭建； pip --version 查看pip版本；更新到最新；pip install --upgrade pip
+4、安装xinference的python包，运行： pip install xinference
+这里的时间比较久，下载的内容也比较多 10g左右；
+5、安装对应的 cuda toolkits；
+pip install xllamacpp --force-reinstall --index-url https://xorbitsai.github.io/xllamacpp/whl/cu124
+运行安装
+6、全部安装完成后，尝试运行： xinference-local -H 0.0.0.0
+会提示 127.0.0.1：9997 端口；crtl +c 或quit 退出；说明安装好了。
+7、重新打开一个CMD；进行镜像打包
+8、运行打包命令；将abcd12345678换成 对应的容器ID，
+docker commit -it abcd12345678 xinference:1.1
+9、运行的时间有点长，大约10分，好了以后在docker images中 查看
+10、运行 docker run -d --name xinference -container -p 9997:9997 xinference:1.1 xinference-local -H 0.0.0.0
+11、这里就运行成功了’； 在本地打开 localhost:9997 就正常可以使用xinference了
+
+
+
+
+
+
