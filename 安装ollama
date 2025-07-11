@@ -1,1 +1,15 @@
-
+ollama可以直接在 hub中搜索
+直接进行安装；
+启动时配置端口 11434[::]11434
+或者直接运行  docker run -d --name ollama -container -p 11434:11434 ollama ollama.serve
+安装完成后：
+在CMD使用 docker ps查看 端口是否正常
+添加模型：
+docker exec -it ollama ollama pull gemma3:1b
+或者
+docker exec -it ollama ollama pull deepseek-r1:7b
+这里ollmam就完成了
+打开dify，点击自己的头像——设置——模型管理商中，选择ollama供应商，进行设置
+模型名称-与库中的一致；
+host：http://host.docker.internal:11434 保存即可。
+添加成功！ 就完了。
