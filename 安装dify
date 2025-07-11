@@ -1,1 +1,12 @@
-
+1、我们从GitHub的仓库下载：https://github.com/langgenius/dify
+2、同时下载本地的插件包:https://github.com/svcvit/dify_plugin_collection
+开始安装dify
+解压下载的dify压缩包；
+进入到docker文件夹中，
+在空白处，右键 在控制台打开
+运行，docker-compose up -d
+这里会下载一些软件；完成后即可启动成功；
+进入locahost 后直接进入界面
+如果你的电脑默认是开启 IIS服务的。需要在
+iis控制管理中，吧web网站中把 欢迎界面的localhost：80 关掉；或者更换IP
+现在打开dity 注册任意邮箱为管理员；进行AI探索
