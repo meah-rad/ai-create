@@ -10,12 +10,12 @@ docker run \
 docker run -e XINFERENCE_MODEL_SRC=modelscope -p 9998:9997 --gpus all xprobe/xinference:v<your_version> xinference-local -H 0.0.0.0 --log-level debug
 
 docker run `
-  -v "C:\Users\lanji\.xinference":/root/.xinference `
-  -v "C:\Users\lanji\.cache\huggingface":/root/.cache/huggingface `
-  -v "C:\Users\lanji\.cache\modelscope":/root/.cache/modelscope `
+  -v "E:\Users\lanji\.xinference":/root/.xinference `
+  -v "E:\Users\lanji\.cache\huggingface":/root/.cache/huggingface `
+  -v "E:\Users\lanji\.cache\modelscope":/root/.cache/modelscope `
   -p 9997:9997 `
   --gpus all `
-  xprobe/xinference:v<your_version> `
+  xprobe/xinference:nithly:laeat`
   xinference-local -H 0.0.0.0
 
 
